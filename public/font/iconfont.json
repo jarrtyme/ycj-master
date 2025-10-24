@@ -1,0 +1,23 @@
+{
+  "id": "2818362",
+  "name": "锋团后台",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "493213",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e780",
+      "unicode_decimal": 59264
+    },
+    {
+      "icon_id": "18379488",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    }
+  ]
+}
