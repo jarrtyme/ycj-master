@@ -1,20 +1,21 @@
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 0;
+/* 全局隐藏滚动条样式，但保持滚动功能 */
+/* Firefox 隐藏滚动条 */
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE 10+ */
 }
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  // 滚动条的宽高
-  width: 5px;
-  height: 10px;
+/* WebKit 内核（Chrome、Safari、Edge）隐藏滚动条 */
+*::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
 
-::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.25);
-  transition: color 0.2s ease;
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track {
+  display: none !important;
+  background: transparent !important;
 }
 
 .ten_tagline:before,
@@ -47,18 +48,15 @@ img {
   display: block;
   height: auto;
   margin: 0 auto;
-  width: 1915px;
   margin-bottom: 50px;
 }
 .binnerimg {
   overflow: hidden;
   height: 888px;
-  width: 1915px;
 }
 
 .mian {
   display: flex;
-  width: 1915px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -124,6 +122,18 @@ img {
   border-radius: 40px;
   background: var(--main_color);
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 60px;
+    border-width: 2px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: 769px) {
+    width: 280px;
+    height: 80px;
+  }
 }
 
 .button__wrapper {
@@ -145,6 +155,16 @@ img {
   letter-spacing: 4px;
   color: var(--base_color);
   transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: 769px) {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
 }
 
 .button::before {
@@ -203,6 +223,18 @@ img {
   align-items: flex-end;
   width: 180px;
   height: 56px;
+
+  @media (max-width: 768px) {
+    top: -40px;
+    width: 135px;
+    height: 42px;
+  }
+
+  @media (min-width: 769px) {
+    top: -54px;
+    width: 180px;
+    height: 56px;
+  }
 }
 
 .bird {
@@ -216,6 +248,17 @@ img {
   animation: sleep 1s ease infinite alternate;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 42px;
+    height: 27px;
+    border-width: 2px;
+  }
+
+  @media (min-width: 769px) {
+    width: 56px;
+    height: 36px;
+  }
 }
 .bird__face {
   position: absolute;
@@ -225,6 +268,18 @@ img {
   background: var(--sub_color2);
   border-radius: 50% 50% 50% 50% / 78% 78% 22% 22%;
   transition: 0.2s;
+
+  @media (max-width: 768px) {
+    top: 11px;
+    width: 9px;
+    height: 4px;
+  }
+
+  @media (min-width: 769px) {
+    top: 15px;
+    width: 12px;
+    height: 6px;
+  }
 }
 .bird__face::before,
 .bird__face::after {
@@ -435,8 +490,8 @@ img {
   margin-top: 20px;
   font-family: 'TencentSansw7';
   overflow: hidden;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 28px;
   height: 30px;
   display: inline-block;
   position: relative;
@@ -458,7 +513,7 @@ img {
 .cetentboxb {
   background-color: rgba(255, 255, 255, 0.849);
   margin: 10px;
-  width: 720px;
+  width: 40vw;
   height: 600px;
   h3 {
     margin: 10px;
@@ -472,6 +527,10 @@ img {
 .imgboxb {
   height: 486px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   img {
     width: 100%;
     position: relative;
@@ -508,7 +567,7 @@ img {
     transition-duration: 1s;
   }
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 768px) {
   .top_media {
     display: block;
   }

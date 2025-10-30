@@ -2,22 +2,17 @@
   <div>
     <!-- 公共头部 -->
     <transition name="zoom" mode="out-in">
-      <!-- <myheader v-if="$route.path !== '/home'" /> -->
-      <!-- <myheader v-if="$route.path === '/home' && $store.state.aaa" /> -->
-      <myheader v-show="$store.state.aaa" />
+      <Header v-show="$store.state.headerVisible" />
     </transition>
     <router-view></router-view>
-    <!-- 公共足部 -->
-    <myfooter v-if="$route.path !== '/home'" />
   </div>
 </template>
 
 <script>
-import myheader from '@/components/header.vue'
-import myfooter from '@/components/footer.vue'
+import Header from '@/components/Header.vue'
 export default {
   name: 'App',
-  components: { myheader, myfooter },
+  components: { Header },
   mounted() {
     window.addEventListener('mousemove', (event) => {
       // 获取页面的高度
@@ -26,18 +21,18 @@ export default {
       var mousePosition = event.clientY
       // 如果鼠标进入页面的一半以上位置，输出消息
       if (mousePosition > windowHeight / 2) {
-        this.aaafn1()
+        this.hideHeader()
       } else {
-        this.aaafn()
+        this.showHeader()
       }
     })
   },
   methods: {
-    aaafn() {
-      this.$store.commit('aaafn')
+    showHeader() {
+      this.$store.commit('showHeader')
     },
-    aaafn1() {
-      this.$store.commit('aaafn1')
+    hideHeader() {
+      this.$store.commit('hideHeader')
     }
   }
 }

@@ -24,7 +24,7 @@ export default {
   methods: {
     tototo() {
       setTimeout(() => {
-        this.$router.push({ path: '/women' })
+        this.$router.push({ path: '/contact' })
       }, 8888)
     }
   },

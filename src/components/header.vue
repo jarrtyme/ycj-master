@@ -1,26 +1,48 @@
 <template>
-  <div class="hearder">
-    <div class="left">
-      <div class="tiao">
-        <div class="tiao1"></div>
-        <div class="tiao1"></div>
-        <div class="tiao1"></div>
-        <div class="tiao1"></div>
-        <div class="tiao1"></div>
-      </div>
+  <div class="header_container">
+    <div class="left_section">
       <img src="../assets/imgs/0003.png" alt="" />
     </div>
-    <h2 v-if="$route.path === '/women'">{{ `speedy  and  convenient`.toUpperCase() }}</h2>
-    <div class="hearderMenu">
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" active-text-color="#e88e07" text-color="#fff">
-        <el-menu-item index="1">首页</el-menu-item>
-        <el-menu-item index="2">业务</el-menu-item>
-        <el-menu-item index="3">技术</el-menu-item>
-        <!-- <el-menu-item index="4">服务</el-menu-item> -->
-        <el-menu-item index="5">我们</el-menu-item>
-      </el-menu>
-      <!-- <span>电话：18021380853</span> -->
+
+    <!-- 桌面端菜单 -->
+    <div class="header_menu desktop_menu">
+      <div class="nav_menu">
+        <div class="nav_item" :class="{ active: activeIndex === '1' }" @click="handleSelect(1)">
+          首页
+        </div>
+        <div class="nav_item" :class="{ active: activeIndex === '2' }" @click="handleSelect(2)">
+          业务
+        </div>
+        <div class="nav_item" :class="{ active: activeIndex === '3' }" @click="handleSelect(3)">
+          资讯
+        </div>
+        <!-- <div class="nav_item" :class="{ active: activeIndex === '4' }" @click="handleSelect(4)">
+          方案
+        </div> -->
+        <div class="nav_item" :class="{ active: activeIndex === '5' }" @click="handleSelect(5)">
+          我们
+        </div>
+      </div>
     </div>
+
+    <!-- 移动端汉堡菜单 -->
+    <div class="hamburger_menu" :class="{ active: isMenuOpen }" @click="toggleMenu">
+      <div class="hamburger_line"></div>
+      <div class="hamburger_line"></div>
+      <div class="hamburger_line"></div>
+    </div>
+
+    <!-- 侧边菜单 -->
+    <div class="side_menu" :class="{ active: isMenuOpen }">
+      <div class="menu_item" @click="handleMobileSelect(1)">首页</div>
+      <div class="menu_item" @click="handleMobileSelect(2)">业务</div>
+      <div class="menu_item" @click="handleMobileSelect(3)">资讯</div>
+      <!-- <div class="menu_item" @click="handleMobileSelect(4)">方案</div> -->
+      <div class="menu_item" @click="handleMobileSelect(5)">我们</div>
+    </div>
+
+    <!-- 菜单遮罩层 -->
+    <div class="menu_overlay" :class="{ active: isMenuOpen }" @click="closeMenu"></div>
   </div>
 </template>
 
@@ -28,27 +50,28 @@
 export default {
   data() {
     return {
-      activeIndex: '1'
+      activeIndex: '1',
+      isMenuOpen: false
     }
   },
   watch: {
-    '$router.path'(val) {
+    '$route.path'(val) {
       if (!val) return
       switch (val) {
         case '/home':
-          activeIndex = '1'
+          this.activeIndex = '1'
           break
-        case '/vocational':
-          activeIndex = '2'
+        case '/business':
+          this.activeIndex = '2'
           break
-        case '/information':
-          activeIndex = '3'
+        case '/news':
+          this.activeIndex = '3'
           break
-        case '/fuwu':
-          activeIndex = '1'
+        case '/solutions':
+          this.activeIndex = '4'
           break
         case '/contact':
-          activeIndex = '5'
+          this.activeIndex = '5'
           break
         default:
           break
@@ -59,40 +82,61 @@ export default {
     handleSelect(key, keyPath) {
       switch (+key) {
         case 1:
-          this.jumpFn('/home')
+          this.$router.push('/home')
           break
         case 2:
-          this.jumpFn('/vocational')
+          this.$router.push('/business')
           break
         case 3:
-          this.jumpFn('/information')
+          this.$router.push('/news')
           break
         case 4:
-          this.jumpFn('/fuwu')
+          this.$router.push('/solutions')
           break
         case 5:
-          this.jumpFn('/contact')
+          this.$router.push('/contact')
           break
         default:
           break
       }
+    },
+    handleMobileSelect(key, event) {
+      if (event) {
+        event.preventDefault()
+      }
+      this.closeMenu()
+      this.handleSelect(key)
+    },
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    },
+    closeMenu() {
+      this.isMenuOpen = false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.hearder {
-  .tiao {
+.header_container {
+  --header-bg: rgba(0, 0, 0, 0.7);
+  /* 统一头部高度变量 */
+  --header-height: 66px;
+  .logo_bars {
+    position: absolute;
     left: 10px;
     bottom: 12px;
     height: 166% !important;
-    .tiao1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .bar {
       background-color: #2e2b2b;
       height: 88px;
+      width: 4px;
     }
   }
-  .hearderMenu {
+  .header_menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +145,138 @@ export default {
       color: #ffffff;
     }
   }
-  height: 66px;
+
+  // 桌面端菜单样式
+  .desktop_menu {
+    /* 默认隐藏，避免在不匹配媒体查询时干扰移动端 */
+    .nav_menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    @media (min-width: 769px) {
+      .nav_menu {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        font-size: 16px;
+        color: #fff;
+      }
+      .nav_item {
+        padding: 0 12px;
+        line-height: var(--header-height);
+        cursor: pointer;
+        transition: color 0.2s ease, background-color 0.2s ease;
+        user-select: none;
+        color: #fff;
+      }
+      .nav_item:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .nav_item.active {
+        color: #e19422;
+      }
+    }
+  }
+
+  // 汉堡菜单按钮样式
+  .hamburger_menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: var(--header-bg);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000000;
+    margin-right: 20px;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    .hamburger_line {
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      .hamburger_line:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+
+      .hamburger_line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger_line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+    }
+  }
+
+  // 侧边菜单样式
+  .side_menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -300px;
+    width: 250px;
+    height: calc(100vh - var(--header-height));
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 999998;
+    padding: 20px 0;
+
+    &.active {
+      right: 0;
+    }
+
+    .menu_item {
+      padding: 15px 30px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        background-color: rgba(232, 142, 7, 0.2);
+        color: #e88e07;
+      }
+
+      &:active {
+        background-color: rgba(232, 142, 7, 0.3);
+      }
+    }
+  }
+
+  // 菜单遮罩层样式
+  .menu_overlay {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999997;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  height: var(--header-height);
   width: 100%;
   position: fixed;
   right: 0;
@@ -110,12 +285,19 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--header-bg);
   margin-bottom: 0 !important;
   box-shadow: 0px 1px 4px rgb(13 13 13 / 19%);
   overflow: hidden;
   img {
-    height: 66px;
+    height: var(--header-height);
+  }
+  /* header_container 独立媒体查询 */
+  @media (max-width: 768px) {
+    --header-height: 50px;
+  }
+  @media (min-width: 769px) {
+    --header-height: 66px;
   }
   .el-menu-item.is-disabled {
     opacity: 1;
@@ -123,30 +305,11 @@ export default {
   .el-menu-item .is-active {
     color: red;
   }
-  .left {
+  .left_section {
     color: #fff;
-    line-height: 61px;
+    line-height: var(--header-height);
     font-size: 40px;
-    margin-left: 24px;
   }
-  .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover {
-    background: none !important;
-  }
-  .el-menu {
-    font-size: 40px !important;
-    color: rgb(235, 6, 6) !important;
-    border: none;
-    background: none;
-    font-size: 24px;
-    .el-menu-item:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-    .el-menu-item.is-disabled {
-      color: rgb(255, 255, 255) !important;
-    }
-  }
+  /* 移除 Element 样式占位，保留自定义导航样式 */
 }
 </style>

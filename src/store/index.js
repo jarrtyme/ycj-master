@@ -1,17 +1,18 @@
-//VX头部
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: { aaa: true },
+  state: {
+    headerVisible: true
+  },
   getters: {},
   mutations: {
-    aaafn(state) {
-      state.aaa = true
+    showHeader(state) {
+      state.headerVisible = true
     },
-    aaafn1(state) {
-      state.aaa = false
+    hideHeader(state) {
+      state.headerVisible = false
     }
   },
   actions: {},
