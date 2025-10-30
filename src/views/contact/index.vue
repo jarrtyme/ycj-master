@@ -10,6 +10,13 @@
           <span class="iconfont icon-jianqie"></span> Easy cutting, fast and comfortable cutting,
           Welcome.
         </h2>
+        <h2 class="contact_text">
+          把专业的活儿，交给专业的我们！<br />
+          精准裁剪，品质之源 <br />
+          科技赋能裁剪，效率成就未来<br />
+          从一卷布到精准裁片，我们一步到位<br />
+          服装制造的关键一环，我们做到最好
+        </h2>
       </div>
       <img class="binner binner1" src="../../assets/imgs/svg.svg" />
     </div>
@@ -21,22 +28,7 @@
       </div>
       <div class="top">
         <div class="topp">
-          <div class="button button--bird">
-            <div class="button__wrapper">
-              <span class="button__text">我们在这</span>
-            </div>
-            <div class="birdBox">
-              <div class="bird wakeup">
-                <div class="bird__face"></div>
-              </div>
-              <div class="bird wakeup">
-                <div class="bird__face"></div>
-              </div>
-              <div class="bird">
-                <div class="bird__face"></div>
-              </div>
-            </div>
-          </div>
+          <BirdButton class="button--bird" text="我们在这" />
           <h1>南通安逸裁剪中心</h1>
           <img class="img11" src="../../assets/imgs/0004.png" alt="" />
           <h3>微 信：jihpxz</h3>
@@ -53,8 +45,10 @@
 
 <script>
 import AMapLoader from '@amap/amap-jsapi-loader'
+import BirdButton from '../../components/BirdButton.vue'
 
 export default {
+  components: { BirdButton },
   data() {
     return {
       map: null,
@@ -108,7 +102,7 @@ export default {
   position: relative;
   .content {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
@@ -163,6 +157,7 @@ export default {
         font-size: 2rem !important;
       }
       @media (min-width: 769px) {
+        font-size: 4rem !important;
       }
     }
     h2 {
@@ -219,17 +214,11 @@ export default {
   }
 
   #container {
-    width: 666px;
-    height: 666px;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      height: 300px;
-      margin: 1rem 0;
-    }
+    width: 100%;
+    height: 300px;
+    margin: 0;
 
     @media (min-width: 769px) {
-      width: 60%;
       height: 500px;
     }
   }
@@ -307,22 +296,16 @@ export default {
   align-items: center;
   flex-direction: column;
   .top {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
     margin-bottom: 50px;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem;
-      gap: 1rem;
-    }
-
     @media (min-width: 769px) {
-      margin-bottom: 4rem;
+      grid-template-columns: 1fr 1fr; /* 两栏布局 */
       gap: 2rem;
+      margin-bottom: 4rem;
     }
 
     .topp {
@@ -347,9 +330,10 @@ export default {
       }
 
       .button--bird {
-        margin-left: 166px;
-        margin-bottom: 24px;
-
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
         @media (max-width: 768px) {
           margin-left: 0;
           margin-bottom: 1rem;
@@ -357,7 +341,7 @@ export default {
         }
 
         @media (min-width: 769px) {
-          margin-left: 3rem;
+          margin-left: 0;
           margin-bottom: 2rem;
         }
       }
@@ -462,5 +446,15 @@ export default {
       gap: 2rem;
     }
   }
+}
+.contact_text {
+  font-family: 'alimmff', sans-serif;
+  font-size: 24px !important;
+  line-height: 40px;
+  color: rgba(238, 238, 238, 0.85);
+  margin-bottom: 24px;
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 </style>

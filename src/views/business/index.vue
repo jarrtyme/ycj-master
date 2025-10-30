@@ -2,7 +2,7 @@
   <div>
     <div class="banner_img">
       <div class="content">
-        <h1>安意裁剪中心</h1>
+        <div class="banner_text">专业服装与帽子裁片解决方案，格柏排版，精准省料</div>
         <div class="scissors_animation">
           <div>
             <span class="iconfont icon-line-scissorsjiandao-02"></span>
@@ -47,7 +47,8 @@ export default {
 <style lang="scss" scoped>
 .scissors_animation {
   position: absolute;
-  z-index: 99999;
+  z-index: -1;
+  top: 20px;
   animation: scissors_move 66s infinite ease-in-out alternate;
   div {
     animation: scissors_rotate 3.6s infinite ease-in-out alternate !important;
@@ -61,14 +62,14 @@ export default {
     -webkit-text-fill-color: transparent;
   }
   @media (max-width: 768px) {
-    top: 40px;
+    top: 152px;
 
     span {
       font-size: 48px;
     }
   }
   @media (min-width: 769px) {
-    top: 80px;
+    top: 200px;
 
     span {
       font-size: 88px;
@@ -105,10 +106,9 @@ export default {
     min-height: 600px;
   }
   .content {
+    width: 80vw;
     position: absolute;
     z-index: 22;
-    width: fit-content !important;
-    white-space: nowrap;
     top: 40%;
     left: 55%;
     transform: translate(-50%, -50%);
@@ -185,6 +185,31 @@ export default {
   100% {
     background-size: 120%;
     background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner_text {
+    font-family: 'alimmff', sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .banner_text {
+    font-family: 'alimmff', sans-serif;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.758);
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
 </style>

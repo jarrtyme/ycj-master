@@ -76,10 +76,9 @@ export default {
 
     @media (min-width: 769px) {
       width: 70%;
-      left: 60%;
-
+      left: 80%;
       h1 {
-        font-size: 5rem;
+        font-size: 5rem !important;
         line-height: 1.05;
       }
     }
