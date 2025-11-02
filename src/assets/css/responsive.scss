@@ -1,43 +1,72 @@
 // 响应式断点配置 - 3个标准断点
-$mobile-max: 768px;        // 手机端：≤768px
-$tablet-min: 769px;        // 平板端：769px-1024px
-$tablet-max: 1024px;
-$desktop-min: 1025px;      // 电脑端：≥1025px
+$mobile-max: 768px; // 手机端：≤768px
+$pc-min: 769px; // PC端：≥769px
 
 // 手机端适配 (≤768px)
 @media (max-width: 768px) {
-  h1 { font-size: 2rem !important; line-height: 1.2; }
-  h2 { font-size: 1.6rem !important; line-height: 1.3; }
-  h3 { font-size: 1.3rem !important; line-height: 1.4; }
-  h4 { font-size: 1.1rem !important; line-height: 1.4; }
-  
-  .container, .content { padding: 0 1rem; }
-  .el-button { font-size: 0.875rem; padding: 0.5rem 1rem; }
-  
-  img {  height: auto; }
-  * { -webkit-overflow-scrolling: touch; }
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.3rem !important;
+    line-height: 1.4;
+  }
+  h4 {
+    font-size: 1.1rem !important;
+    line-height: 1.4;
+  }
+
+  .container,
+  .content {
+    padding: 0 1rem;
+  }
+  .el-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  img {
+    height: auto;
+  }
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
-// 平板端适配 (769px-1024px)
-@media (min-width: 769px) and (max-width: 1024px) {
-  h1 { font-size: 2.5rem !important; line-height: 1.1; }
-  h2 { font-size: 2rem !important; line-height: 1.2; }
-  h3 { font-size: 1.6rem !important; line-height: 1.3; }
-  h4 { font-size: 1.3rem !important; line-height: 1.4; }
-  
-  .container, .content { padding: 0 1.5rem; max-width: 960px; margin: 0 auto; }
-  .el-button { font-size: 0.95rem; padding: 0.6rem 1.2rem; }
-}
+// PC端适配 (≥769px)
+@media (min-width: 769px) {
+  h1 {
+    font-size: 3rem !important;
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: 2.4rem !important;
+    line-height: 1.1;
+  }
+  h3 {
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+  }
+  h4 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+  }
 
-// 电脑端适配 (≥1025px)
-@media (min-width: 1025px) {
-  h1 { font-size: 3rem !important; line-height: 1.05; }
-  h2 { font-size: 2.4rem !important; line-height: 1.1; }
-  h3 { font-size: 1.9rem !important; line-height: 1.2; }
-  h4 { font-size: 1.5rem !important; line-height: 1.3; }
-  
-  .container, .content { padding: 0 2rem; max-width: 1200px; margin: 0 auto; }
-  .el-button { font-size: 1rem; padding: 0.7rem 1.4rem; }
+  .container,
+  .content {
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .el-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
 }
 
 // 响应式工具类
@@ -45,38 +74,60 @@ $desktop-min: 1025px;      // 电脑端：≥1025px
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-  
-  @media (min-width: 769px) { padding: 0 1.5rem; }
-  @media (min-width: 1025px) { padding: 0 2rem; max-width: 1200px; }
+
+  @media (min-width: 769px) {
+    padding: 0 2rem;
+    max-width: 1200px;
+  }
 }
 
 .responsive-text {
   font-size: 1rem;
   line-height: 1.5;
-  
-  @media (min-width: 769px) { font-size: 1.1rem; line-height: 1.6; }
-  @media (min-width: 1025px) { font-size: 1.2rem; line-height: 1.7; }
+
+  @media (min-width: 769px) {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
 }
 
 .responsive-padding {
   padding: 1rem;
-  
-  @media (min-width: 769px) { padding: 1.5rem; }
-  @media (min-width: 1025px) { padding: 2rem; }
+
+  @media (min-width: 769px) {
+    padding: 2rem;
+  }
 }
 
 .responsive-margin {
   margin: 1rem 0;
-  
-  @media (min-width: 769px) { margin: 1.5rem 0; }
-  @media (min-width: 1025px) { margin: 2rem 0; }
+
+  @media (min-width: 769px) {
+    margin: 2rem 0;
+  }
 }
 
 // 显示/隐藏工具类
-.hide-mobile { @media (max-width: 768px) { display: none !important; } }
-.hide-tablet { @media (min-width: 769px) and (max-width: 1024px) { display: none !important; } }
-.hide-desktop { @media (min-width: 1025px) { display: none !important; } }
+.hide-mobile {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+.hide-desktop {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
 
-.show-mobile-only { display: none; @media (max-width: 768px) { display: block !important; } }
-.show-tablet-only { display: none; @media (min-width: 769px) and (max-width: 1024px) { display: block !important; } }
-.show-desktop-only { display: none; @media (min-width: 1025px) { display: block !important; } }
+.show-mobile-only {
+  display: none;
+  @media (max-width: 768px) {
+    display: block !important;
+  }
+}
+.show-desktop-only {
+  display: none;
+  @media (min-width: 769px) {
+    display: block !important;
+  }
+}

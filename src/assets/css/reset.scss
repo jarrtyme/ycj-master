@@ -488,14 +488,18 @@ img {
 .ten_tagline,
 .ten_tagline--fill {
   margin-top: 20px;
-  font-family: 'TencentSansw7';
+  font-family: 'alimmff', sans-serif;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0.9));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   overflow: hidden;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   height: 30px;
   display: inline-block;
   position: relative;
-  border-top: 1px solid #0052d9;
+  border-top: 1px solid #105edb;
   padding: 0px 30px;
   color: #0052d9;
 }
@@ -507,14 +511,13 @@ img {
   left: 0px;
   bottom: 0px;
   width: calc(100% - 12px);
-  border-top: 1px solid #0052d9;
+  border-top: 1px solid #2400d9;
 }
 // 宽盒子
 .cetentboxb {
   background-color: rgba(255, 255, 255, 0.849);
   margin: 10px;
   width: 40vw;
-  height: 600px;
   h3 {
     margin: 10px;
   }
@@ -545,7 +548,6 @@ img {
   background-color: rgba(255, 255, 255, 0.849);
   margin: 10px 6px;
   width: 365px;
-  height: 600px;
   h3 {
     margin: 10px;
   }
@@ -573,7 +575,6 @@ img {
   }
   .cetentboxb {
     width: 90vw;
-    height: 318px;
     .imgboxb {
       height: 268px;
     }
@@ -583,7 +584,6 @@ img {
   }
   .cetentboxs {
     width: 42vw;
-    height: 318px;
     .imgboxs {
       height: 268px;
     }
@@ -605,7 +605,7 @@ img {
     left: calc(100% - 8px);
     bottom: 0px;
     width: 100%;
-    border-top: 1px solid #0052d9;
+    border-top: 1px solid #0a295a;
     transform: rotate(-69deg) translate(-1px, 0px);
     transform-origin: 0px 0px;
   }
@@ -617,6 +617,6 @@ img {
     left: 0px;
     bottom: 0px;
     width: calc(100% - 8px);
-    border-top: 1px solid #0052d9;
+    border-top: 1px solid #1d00d9;
   }
 }

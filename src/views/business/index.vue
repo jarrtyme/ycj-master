@@ -2,26 +2,32 @@
   <div>
     <div class="banner_img">
       <div class="content">
-        <div class="banner_text">专业服装与帽子裁片解决方案，格柏排版，精准省料</div>
         <div class="scissors_animation">
           <div>
-            <span class="iconfont icon-line-scissorsjiandao-02"></span>
+            <span class="iconfont el-icon-scissors"></span>
           </div>
         </div>
       </div>
       <div class="banner_layer_2 banner_layer_1"></div>
     </div>
+
     <div class="main_content rotateOutDownLeft">
       <ProductList
-        title="加 工 区"
-        subtitle="Processing Area"
+        title="智能排版 极致省料"
+        subtitle="运用格柏顶级排版软件，智能优化路径，实现布料利用率最大化，直接为您降低核心物料成本"
         :dataList="cuttingData"
         imageMode="url"
       />
       <ProductList
-        title="样 帽 展 示"
-        subtitle="Sample hat display"
+        title="全能工艺 无所不裁"
+        subtitle="我们深耕服装与帽子领域，深刻理解版型与工艺，能为您提供更具专业价值的裁剪建议"
         :dataList="processingData"
+        imageMode="path"
+      />
+      <ProductList
+        title="精准高效，稳定交付"
+        subtitle="全自动设备确保毫米级精度与超高层裁剪效率，裁片边缘光滑整齐，品质稳定，交期迅捷"
+        :dataList="processingData2"
         imageMode="path"
       />
     </div>
@@ -29,7 +35,7 @@
 </template>
 
 <script>
-import { cuttingData, processingData } from './components/mock.js'
+import { cuttingData, processingData, processingData2 } from './components/mock.js'
 import ProductList from './components/ProductList.vue'
 
 export default {
@@ -37,6 +43,7 @@ export default {
   data() {
     return {
       cuttingData,
+      processingData2,
       processingData
     }
   },
@@ -62,14 +69,14 @@ export default {
     -webkit-text-fill-color: transparent;
   }
   @media (max-width: 768px) {
-    top: 152px;
+    top: 50px;
 
     span {
       font-size: 48px;
     }
   }
   @media (min-width: 769px) {
-    top: 200px;
+    top: 100px;
 
     span {
       font-size: 88px;
@@ -86,19 +93,17 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/imgs/bejin.jpg');
-    background-size: 120%;
-    background-position: center;
+    background-image: url('../../assets/imgs/233.png');
     background-repeat: no-repeat;
-    animation: bg_anim_background 66s infinite ease-in-out alternate;
+
   }
   .banner_layer_2 {
-    animation: banner_move_background 20s infinite ease-in-out alternate;
+    animation: banner_move_background 60s infinite ease-in-out alternate;
   }
 
   @media (max-width: 768px) {
     height: 20vh;
-    min-height: 300px;
+    min-height: 288px;
   }
 
   @media (min-width: 769px) {
@@ -193,7 +198,12 @@ export default {
     font-family: 'alimmff', sans-serif;
     font-size: 24px;
     line-height: 40px;
-    color: rgba(0, 0, 0, 0.75);
+    background-image: linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     margin-bottom: 24px;
     margin-top: 24px;
     margin-left: 24px;
@@ -205,7 +215,11 @@ export default {
   .banner_text {
     font-family: 'alimmff', sans-serif;
     font-size: 4rem;
-    color: rgba(255, 255, 255, 0.758);
+    background-image: linear-gradient(-225deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 24px;
     margin-top: 24px;
     margin-left: 24px;

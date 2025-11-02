@@ -88,8 +88,6 @@ export default {
   height: auto;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
     object-fit: cover;
   }
 }

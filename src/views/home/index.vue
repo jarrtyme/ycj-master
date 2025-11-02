@@ -4,12 +4,20 @@
       <div class="content">
         <h1>南通安逸裁剪中心</h1>
       </div>
+      <div class="banner_text">
+        源自格柏（Gerber）智能裁剪<br />
+        以毫米级精度<br />
+        为您裁出卓越效益
+      </div>
+
       <div class="section_second">
         <img class="bg_img_1" src="../../assets/imgs/sesame-3/2- (1).png" alt="" />
         <img class="bg_img_2" src="../../assets/imgs/sesame-3/2- (2).png" alt="" />
         <img class="bg_img_3" src="../../assets/imgs/sesame-3/2- (3).png" alt="" />
         <img class="bg_img_4" src="../../assets/imgs/sesame-3/2- (4).png" alt="" />
       </div>
+
+      <div class="content_us" @click="goToContact">立即咨询 | 获取报价</div>
     </div>
   </div>
 </template>
@@ -18,6 +26,11 @@
 export default {
   data() {
     return {}
+  },
+  methods: {
+    goToContact() {
+      this.$router.push('/contact')
+    }
   }
 }
 </script>
@@ -80,6 +93,7 @@ export default {
       h1 {
         font-size: 5rem !important;
         line-height: 1.05;
+        color: rgb(255, 255, 255, 0.8) !important;
       }
     }
   }
@@ -157,6 +171,9 @@ export default {
       height: 80vh;
       opacity: 0.9;
     }
+    @media (min-width: 768px) {
+      width: 100%;
+    }
   }
   .title1 {
     position: absolute;
@@ -198,5 +215,55 @@ export default {
   height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
+}
+
+.banner_text {
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+  z-index: 21;
+  font-family: 'alimmff', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(to right, rgba(3, 3, 3, 0.8), rgba(255, 0, 0, 0.4));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content_us {
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+  z-index: 21;
+  font-family: 'alimmff', sans-serif;
+  font-size: 1rem;
+  color: #ebebeb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #e88e07;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (min-width: 769px) {
+  .banner_text {
+    bottom: 15vh;
+    top: initial !important;
+    right: 10vw !important;
+    left: initial !important;
+    font-size: 1.4rem;
+    background: linear-gradient(to right, rgba(249, 249, 249), rgb(218, 218, 218));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .content_us {
+    font-size: 1.5rem;
+  }
 }
 </style>

@@ -11,18 +11,16 @@
           Welcome.
         </h2>
         <h2 class="contact_text">
-          把专业的活儿，交给专业的我们！<br />
           精准裁剪，品质之源 <br />
           科技赋能裁剪，效率成就未来<br />
           从一卷布到精准裁片，我们一步到位<br />
-          服装制造的关键一环，我们做到最好
         </h2>
       </div>
       <img class="binner binner1" src="../../assets/imgs/svg.svg" />
     </div>
     <div class="mian">
       <div class="lianxi">
-        <h1>联系我们</h1>
+        <h2>联系我们</h2>
         <i></i>
         <h2>Contact Us</h2>
       </div>
@@ -92,11 +90,13 @@ export default {
     @media (max-width: 768px) {
       height: 20vh;
       min-height: 300px;
+      width: 100%;
     }
 
     @media (min-width: 769px) {
       height: 70vh;
       min-height: 600px;
+      width: 100%;
     }
   }
   position: relative;
@@ -186,11 +186,13 @@ export default {
   @media (max-width: 768px) {
     height: 20vh;
     min-height: 300px;
+    width: 100%;
   }
 
   @media (min-width: 769px) {
     height: 70vh;
     min-height: 600px;
+    width: 100%;
   }
 }
 .mian {
@@ -229,9 +231,15 @@ export default {
     padding-right: 15px;
     padding-left: 15px;
     margin-bottom: 24px;
+    h2 {
+      background-image: linear-gradient(-225deg, #2cd8d5 0%, #6b8dd6 48%, #8e37d7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     // 移动端适配
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       padding: 0 0.5rem;
       margin-bottom: 1rem;
     }
@@ -243,7 +251,7 @@ export default {
       text-align: center;
 
       // 移动端适配
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         font-size: 1.2rem;
         line-height: 1.4;
       }
@@ -261,7 +269,7 @@ export default {
       background: #0463b5;
 
       // 移动端适配
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         width: 80px;
         height: 1px;
         margin: 0.5rem auto;
@@ -280,7 +288,7 @@ export default {
       text-align: center;
 
       // 移动端适配
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         font-size: 0.9rem;
         line-height: 1.3;
       }
@@ -313,6 +321,11 @@ export default {
       font-family: 'alimmff' !important;
       margin-right: 66px;
       margin-bottom: 24px;
+      background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
 
       @media (max-width: 768px) {
         margin-right: 0;

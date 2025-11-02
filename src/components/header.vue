@@ -11,7 +11,7 @@
           首页
         </div>
         <div class="nav_item" :class="{ active: activeIndex === '2' }" @click="handleSelect(2)">
-          业务
+          核心优势
         </div>
         <div class="nav_item" :class="{ active: activeIndex === '3' }" @click="handleSelect(3)">
           资讯
@@ -20,7 +20,7 @@
           方案
         </div> -->
         <div class="nav_item" :class="{ active: activeIndex === '5' }" @click="handleSelect(5)">
-          我们
+          联系我们
         </div>
       </div>
     </div>
@@ -35,10 +35,10 @@
     <!-- 侧边菜单 -->
     <div class="side_menu" :class="{ active: isMenuOpen }">
       <div class="menu_item" @click="handleMobileSelect(1)">首页</div>
-      <div class="menu_item" @click="handleMobileSelect(2)">业务</div>
-      <div class="menu_item" @click="handleMobileSelect(3)">资讯</div>
+      <div class="menu_item" @click="handleMobileSelect(2)">核心优势</div>
+      <div class="menu_item" @click="handleMobileSelect(3)">自动设备</div>
       <!-- <div class="menu_item" @click="handleMobileSelect(4)">方案</div> -->
-      <div class="menu_item" @click="handleMobileSelect(5)">我们</div>
+      <div class="menu_item" @click="handleMobileSelect(5)">联系我们</div>
     </div>
 
     <!-- 菜单遮罩层 -->

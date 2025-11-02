@@ -58,6 +58,22 @@ export const processingData = {
       url: require(`../../../assets/imgs/caijian/1.png`)
     },
     {
+      name: '镂空裁',
+      desc: '镂空裁剪',
+      url: require('../../../assets/imgs/caijian/4.jpg')
+    }
+  ]
+}
+
+export const processingData2 = {
+  sm: [
+    // 小机器数据暂时为空
+    {
+      name: '格伯制版',
+      desc: '格伯制版',
+      url: require(`../../../assets/imgs/caijian/1.png`)
+    },
+    {
       name: '电脑排版',
       desc: '电脑排版',
       url: require('../../../assets/imgs/caijian/2.png')
@@ -71,6 +87,19 @@ export const processingData = {
       name: '镂空裁',
       desc: '镂空裁剪',
       url: require('../../../assets/imgs/caijian/4.jpg')
+    }
+  ],
+  bm: [
+    // 大机器数据暂时为空
+    {
+      name: '格伯制版',
+      desc: '格伯制版',
+      url: require(`../../../assets/imgs/caijian/1.png`)
+    },
+    {
+      name: '电脑排版',
+      desc: '电脑排版',
+      url: require('../../../assets/imgs/caijian/2.png')
     }
   ]
 }

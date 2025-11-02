@@ -13,10 +13,10 @@
               alt=""
             />
           </div>
-          <div class="ten_card_body">
+          <div class="ten_card_title"><i class="el-icon-s-promotion"></i>{{ item.desc }}</div>
+          <!-- <div class="ten_card_body">
             <span class="ten_tagline">{{ item.desc }}</span>
-            <!-- <h3>{{ item.desc }}</h3> -->
-          </div>
+          </div> -->
         </div>
       </template>
 
@@ -26,10 +26,10 @@
           <div class="imgboxs">
             <img :src="require(`../../../assets/imgs/sucai/maozi/chang/${index + 1}.jpg`)" alt="" />
           </div>
-          <div class="ten_card_body">
+          <div class="ten_card_title"><i class="el-icon-s-management"></i>{{ item.desc }}</div>
+          <!-- <div class="ten_card_body">
             <span class="ten_tagline">{{ item.desc + (index + 1) }}</span>
-            <!-- <h3>{{ item.desc + (index + 1) }}</h3> -->
-          </div>
+          </div> -->
         </div>
       </template>
     </div>
@@ -87,6 +87,35 @@ export default {
 
   @media (min-width: 769px) {
     margin-bottom: 4rem;
+  }
+}
+.ten_card_title {
+  margin-bottom: 5px;
+  i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 8px;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  font-family: 'alimmff', sans-serif;
+  font-size: 1em;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #0084ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cetentboxs,
+.cetentboxb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  img {
+    object-fit: cover;
   }
 }
 </style>
