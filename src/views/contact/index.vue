@@ -27,8 +27,8 @@
       <div class="top">
         <div class="topp">
           <BirdButton class="button--bird" text="我们在这" />
-          <h1>南通安逸裁剪中心</h1>
-          <img class="img11" src="../../assets/imgs/0004.png" alt="" />
+          <h1>南通意中裁剪中心</h1>
+          <img class="img11" src="../../assets/imgs/popo.png" alt="" />
           <h3>微 信：jihpxz</h3>
           <h3>手 机：18015224889</h3>
           <h3>邮 箱：yzdm-118@163.com</h3>
@@ -326,7 +326,6 @@ export default {
       background-clip: text;
       -webkit-text-fill-color: transparent;
 
-
       @media (max-width: 768px) {
         margin-right: 0;
         margin-bottom: 1rem;
@@ -376,6 +375,7 @@ export default {
       .img11 {
         width: 605px;
         margin-bottom: 24px;
+        border-radius: 20px;
 
         @media (max-width: 768px) {
           width: 100%;

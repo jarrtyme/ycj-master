@@ -1,7 +1,7 @@
 <template>
   <div class="header_container">
     <div class="left_section">
-      <img src="../assets/imgs/0003.png" alt="" />
+      <img src="../assets/imgs/popo.png" alt="" />
     </div>
 
     <!-- 桌面端菜单 -->
@@ -10,15 +10,16 @@
         <div class="nav_item" :class="{ active: activeIndex === '1' }" @click="handleSelect(1)">
           首页
         </div>
+        <div class="nav_item" :class="{ active: activeIndex === '4' }" @click="handleSelect(4)">
+          裁艺现场
+        </div>
         <div class="nav_item" :class="{ active: activeIndex === '2' }" @click="handleSelect(2)">
           核心优势
         </div>
         <div class="nav_item" :class="{ active: activeIndex === '3' }" @click="handleSelect(3)">
-          资讯
+          科技赋能
         </div>
-        <!-- <div class="nav_item" :class="{ active: activeIndex === '4' }" @click="handleSelect(4)">
-          方案
-        </div> -->
+
         <div class="nav_item" :class="{ active: activeIndex === '5' }" @click="handleSelect(5)">
           联系我们
         </div>
@@ -35,9 +36,10 @@
     <!-- 侧边菜单 -->
     <div class="side_menu" :class="{ active: isMenuOpen }">
       <div class="menu_item" @click="handleMobileSelect(1)">首页</div>
+      <div class="menu_item" @click="handleMobileSelect(4)">裁艺现场</div>
+
       <div class="menu_item" @click="handleMobileSelect(2)">核心优势</div>
-      <div class="menu_item" @click="handleMobileSelect(3)">自动设备</div>
-      <!-- <div class="menu_item" @click="handleMobileSelect(4)">方案</div> -->
+      <div class="menu_item" @click="handleMobileSelect(3)">科技赋能</div>
       <div class="menu_item" @click="handleMobileSelect(5)">联系我们</div>
     </div>
 
@@ -119,7 +121,7 @@ export default {
 
 <style lang="scss" scoped>
 .header_container {
-  --header-bg: rgba(0, 0, 0, 0.7);
+  --header-bg: rgba(0, 0, 0, 0.66);
   /* 统一头部高度变量 */
   --header-height: 66px;
   .logo_bars {
@@ -176,7 +178,12 @@ export default {
         background-color: rgba(0, 0, 0, 0.1);
       }
       .nav_item.active {
-        color: #e19422;
+        color: transparent;
+        background: linear-gradient(to right, rgb(255, 230, 1), rgb(247, 0, 0));
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
   }
@@ -229,7 +236,7 @@ export default {
     right: -300px;
     width: 250px;
     height: calc(100vh - var(--header-height));
-    background-color: rgba(0, 0, 0, 0.5);
+    background: var(--header-bg);
     transition: right 0.3s ease;
     z-index: 999998;
     padding: 20px 0;

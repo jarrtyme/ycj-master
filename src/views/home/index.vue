@@ -2,7 +2,7 @@
   <div class="main_container">
     <div class="banner_image">
       <div class="content">
-        <h1>南通安逸裁剪中心</h1>
+        <h1>南通意中裁剪中心</h1>
       </div>
       <div class="banner_text">
         源自格柏（Gerber）智能裁剪<br />
@@ -219,7 +219,7 @@ export default {
 
 .banner_text {
   position: absolute;
-  top: 10vh;
+  top: 13vh;
   left: 5vw;
   z-index: 21;
   font-family: 'alimmff', sans-serif;

@@ -24,12 +24,12 @@
         :dataList="processingData"
         imageMode="path"
       />
-      <ProductList
+      <!-- <ProductList
         title="精准高效，稳定交付"
         subtitle="全自动设备确保毫米级精度与超高层裁剪效率，裁片边缘光滑整齐，品质稳定，交期迅捷"
         :dataList="processingData2"
         imageMode="path"
-      />
+      /> -->
     </div>
   </div>
 </template>
@@ -73,6 +73,11 @@ export default {
 
     span {
       font-size: 48px;
+      background: linear-gradient(to right, rgba(80, 80, 136, 0.8), rgba(156, 56, 56, 0.8));
+      background: #fff;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   @media (min-width: 769px) {
@@ -93,12 +98,12 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/imgs/233.png');
+    background-image: url('../../assets/imgs/lklk.png');
     background-repeat: no-repeat;
-
+    background-size: cover;
   }
   .banner_layer_2 {
-    animation: banner_move_background 60s infinite ease-in-out alternate;
+    // animation: banner_move_background 60s infinite ease-in-out alternate;
   }
 
   @media (max-width: 768px) {
@@ -179,18 +184,18 @@ export default {
 }
 
 @keyframes banner_move_background {
-  0% {
-    background-size: 120%;
-    background-position: center;
-  }
-  50% {
-    background-size: 125%;
-    background-position: 50% 30%;
-  }
-  100% {
-    background-size: 120%;
-    background-position: center;
-  }
+  // 0% {
+  //   background-size: 100%;
+  //   background-position: center;
+  // }
+  // 50% {
+  //   background-size: 100%;
+  //   background-position: 50% 30%;
+  // }
+  // 100% {
+  //   background-size: 100%;
+  //   background-position: center;
+  // }
 }
 
 @media (max-width: 768px) {
