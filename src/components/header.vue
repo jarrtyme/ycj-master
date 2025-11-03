@@ -236,7 +236,7 @@ export default {
     right: -300px;
     width: 250px;
     height: calc(100vh - var(--header-height));
-    background: var(--header-bg);
+    background: rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease;
     z-index: 999998;
     padding: 20px 0;
