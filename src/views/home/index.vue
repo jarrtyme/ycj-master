@@ -11,10 +11,26 @@
       </div>
 
       <div class="section_second">
-        <img class="bg_img_1" src="../../assets/imgs/sesame-3/2- (1).png" alt="" />
-        <img class="bg_img_2" src="../../assets/imgs/sesame-3/2- (2).png" alt="" />
-        <img class="bg_img_3" src="../../assets/imgs/sesame-3/2- (3).png" alt="" />
-        <img class="bg_img_4" src="../../assets/imgs/sesame-3/2- (4).png" alt="" />
+        <img
+          class="bg_img_1"
+          src="../../assets/imgs/sesame-3/2- (1).png"
+          alt="南通意中裁剪中心 - 格柏智能裁剪设备展示背景图"
+        />
+        <img
+          class="bg_img_2"
+          src="../../assets/imgs/sesame-3/2- (2).png"
+          alt="智能裁剪中心 - 专业裁剪服务背景装饰"
+        />
+        <img
+          class="bg_img_3"
+          src="../../assets/imgs/sesame-3/2- (3).png"
+          alt="南通裁剪中心 - 格柏裁剪技术背景图"
+        />
+        <img
+          class="bg_img_4"
+          src="../../assets/imgs/sesame-3/2- (4).png"
+          alt="意中裁剪中心 - 专业裁剪设备背景装饰图"
+        />
       </div>
 
       <div class="content_us" @click="goToContact">立即咨询 | 获取报价</div>

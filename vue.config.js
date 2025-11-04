@@ -67,7 +67,7 @@ module.exports = {
   //文档标题拦截
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
-      args[0].title = "安易裁剪";
+      args[0].title = "意中裁剪中心";
       return args;
     });
   },

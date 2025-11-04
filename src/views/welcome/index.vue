@@ -1,7 +1,11 @@
 <template>
   <div class="yyy">
     <div class=""></div>
-    <img class="juda" src="../../assets/imgs/bejin.jpg" />
+    <img
+      class="juda"
+      src="../../assets/imgs/bejin.jpg"
+      alt="南通意中裁剪中心欢迎页背景 - 专业格柏智能裁剪服务"
+    />
     <div class="content">
       <h2>
         <span class="iconfont icon-jianqie"></span>{{ '  Easy cutting, Welcome.'.toUpperCase() }}

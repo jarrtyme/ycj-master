@@ -1,20 +1,64 @@
 <template>
   <div>
     <div>
-      <img class="caichuang" src="../../assets/imgs/caichuang/11.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/12.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/13.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/14.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/5.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/6.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/7.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/8.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/9.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/10.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/1.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/2.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/3.jpg" />
-      <img class="caichuang" src="../../assets/imgs/caichuang/4.jpg" />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/11.jpg"
+        alt="格柏智能裁剪设备工作场景展示"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/12.jpg"
+        alt="自动裁剪机裁剪布料实拍图"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/13.jpg"
+        alt="全自动拉布机铺布操作现场"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/14.jpg"
+        alt="南通意中裁剪中心裁剪设备展示"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/5.jpg"
+        alt="智能裁剪系统裁剪复杂图形展示"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/6.jpg"
+        alt="格柏裁剪机精准裁剪布料过程"
+      />
+      <img class="caichuang" src="../../assets/imgs/caichuang/7.jpg" alt="专业裁剪设备工作场景" />
+      <img class="caichuang" src="../../assets/imgs/caichuang/8.jpg" alt="服装裁剪设备操作现场" />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/9.jpg"
+        alt="智能裁剪中心裁剪工艺流程"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/10.jpg"
+        alt="南通裁剪中心专业裁剪服务展示"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/1.jpg"
+        alt="格柏自动裁剪系统裁剪效果展示"
+      />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/2.jpg"
+        alt="智能裁剪设备裁剪成品展示"
+      />
+      <img class="caichuang" src="../../assets/imgs/caichuang/3.jpg" alt="裁剪中心设备操作演示" />
+      <img
+        class="caichuang"
+        src="../../assets/imgs/caichuang/4.jpg"
+        alt="专业裁剪服务工艺流程展示"
+      />
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="binnerimg">
-      <img class="binner" src="./jsj.png" />
+      <img class="binner" src="./jsj.png" alt="南通意中裁剪中心 - 智能裁剪解决方案展示横幅图" />
     </div>
 
     <div class="media-list">

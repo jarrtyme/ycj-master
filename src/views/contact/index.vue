@@ -16,7 +16,11 @@
           从一卷布到精准裁片，我们一步到位<br />
         </h2>
       </div>
-      <img class="binner binner1" src="../../assets/imgs/svg.svg" />
+      <img
+        class="binner binner1"
+        src="../../assets/imgs/svg.svg"
+        alt="南通意中裁剪中心联系我们页面装饰图"
+      />
     </div>
     <div class="mian">
       <div class="lianxi">
@@ -28,7 +32,11 @@
         <div class="topp">
           <BirdButton class="button--bird" text="我们在这" />
           <h1>南通意中裁剪中心</h1>
-          <img class="img11" src="../../assets/imgs/popo.png" alt="" />
+          <img
+            class="img11"
+            src="../../assets/imgs/popo.png"
+            alt="南通意中裁剪中心微信二维码 - 扫码联系我们"
+          />
           <h3>微 信：jihpxz</h3>
           <h3>手 机：18015224889</h3>
           <h3>邮 箱：yzdm-118@163.com</h3>

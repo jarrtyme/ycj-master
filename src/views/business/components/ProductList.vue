@@ -6,11 +6,15 @@
       <template v-for="(item, index) in dataList.bm">
         <div class="cetentboxb">
           <div class="imgboxb">
-            <img v-if="imageMode === 'url'" :src="item.url" alt="" />
+            <img
+              v-if="imageMode === 'url'"
+              :src="item.url"
+              :alt="item.desc || '南通意中裁剪中心产品展示'"
+            />
             <img
               v-else
               :src="require(`../../../assets/imgs/sucai/maozi/duan/${index + 1}.jpg`)"
-              alt=""
+              :alt="item.desc || `裁剪产品展示图${index + 1} - 南通意中裁剪中心`"
             />
           </div>
           <div class="ten_card_title"><i class="el-icon-s-promotion"></i>{{ item.desc }}</div>
@@ -24,7 +28,10 @@
       <template v-if="dataList.sm && dataList.sm.length > 0">
         <div v-for="(item, index) in dataList.sm" :key="'sm-' + index" class="cetentboxs">
           <div class="imgboxs">
-            <img :src="require(`../../../assets/imgs/sucai/maozi/chang/${index + 1}.jpg`)" alt="" />
+            <img
+              :src="require(`../../../assets/imgs/sucai/maozi/chang/${index + 1}.jpg`)"
+              :alt="item.desc || `裁剪产品详细展示图${index + 1} - 南通意中裁剪中心`"
+            />
           </div>
           <div class="ten_card_title"><i class="el-icon-s-management"></i>{{ item.desc }}</div>
           <!-- <div class="ten_card_body">
@@ -103,7 +110,7 @@ export default {
   }
   font-family: 'alimmff', sans-serif;
   font-size: 1em;
-  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #0084ff 100%);
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #0084ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -1,7 +1,7 @@
 <template>
   <div class="header_container">
     <div class="left_section">
-      <img src="../assets/imgs/popo.png" alt="" />
+      <img src="../assets/imgs/popo.png" alt="南通意中裁剪中心微信二维码" />
     </div>
 
     <!-- 桌面端菜单 -->
